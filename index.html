@@ -14,6 +14,7 @@
             <ul>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#cart">Your Cart</a></li>
             </ul>
         </nav>
     </header>
@@ -29,6 +30,7 @@
                             <h3>Espresso</h3>
                             <p>A strong and rich coffee made by forcing hot water through finely-ground coffee beans.</p>
                             <span>$3.00</span>
+                            <button class="add-to-cart" data-name="Espresso" data-price="3.00">Add to Cart</button>
                         </div>
                     </div>
                     <div class="menu-item">
@@ -37,6 +39,7 @@
                             <h3>Cappuccino</h3>
                             <p>A creamy coffee with a layer of foam and a touch of cocoa powder on top.</p>
                             <span>$4.00</span>
+                            <button class="add-to-cart" data-name="Cappuccino" data-price="4.00">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -47,6 +50,7 @@
                             <h3>Latte</h3>
                             <p>A smooth blend of espresso and steamed milk with a light foam.</p>
                             <span>$4.50</span>
+                            <button class="add-to-cart" data-name="Latte" data-price="4.50">Add to Cart</button>
                         </div>
                     </div>
                     <div class="menu-item">
@@ -55,10 +59,20 @@
                             <h3>Macchiato</h3>
                             <p>An espresso with a small amount of steamed milk.</p>
                             <span>$3.50</span>
+                            <button class="add-to-cart" data-name="Macchiato" data-price="3.50">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div id="total">Total: $0.00</div>
+            <button id="checkout">Checkout</button>
         </section>
 
         <section id="contact">
@@ -66,13 +80,13 @@
             <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required aria-required="true">
-
+                
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required aria-required="true">
-
+                
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required aria-required="true"></textarea>
-
+                
                 <button type="submit">Send Message</button>
             </form>
         </section>
