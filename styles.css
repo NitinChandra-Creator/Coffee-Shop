@@ -27,6 +27,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Center the nav items */
 }
 
 nav ul li {
@@ -95,6 +96,31 @@ nav ul li a:hover {
 
 .menu-item p {
     margin: 5px 0;
+}
+
+.menu-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item .quantity button {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.menu-item .quantity button:hover {
+    background-color: #00563f; /* Darker green for hover effect */
+}
+
+.menu-item .quantity span {
+    margin: 0 10px;
+    font-size: 1.2em;
 }
 
 /* Contact Section Styles */
@@ -181,6 +207,91 @@ footer p {
     margin: 0;
 }
 
+/* Cart Section Styles */
+#cart {
+    background-color: #fff; /* Clean background for contrast */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cart h2 {
+    font-size: 2em;
+    color: #00704a; /* Starbucks green */
+    border-bottom: 2px solid #00704a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.cart-item .details {
+    flex-grow: 1;
+}
+
+.cart-item .details h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.cart-item .details p {
+    margin: 5px 0;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity span {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.cart-item .quantity button {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cart-item .quantity button:hover {
+    background-color: #00563f; /* Darker green for hover effect */
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #00704a; /* Starbucks green */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-item {
@@ -189,6 +300,15 @@ footer p {
     }
 
     .menu-item img {
+        margin-bottom: 10px;
+    }
+
+    #cart .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cart .cart-item img {
         margin-bottom: 10px;
     }
 }
